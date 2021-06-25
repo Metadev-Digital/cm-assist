@@ -1,4 +1,4 @@
-﻿namespace Smarti_Assist
+﻿namespace CM_Assist
 {
     partial class frmViewAssembly
     {

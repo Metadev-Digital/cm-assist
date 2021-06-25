@@ -25,7 +25,7 @@ using System.Windows.Forms;
  */
 
 
-namespace Smarti_Assist
+namespace CM_Assist
 {
     class labelMaker : IDisposable
     {

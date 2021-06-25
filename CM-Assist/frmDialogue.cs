@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Copyright Copyright MIT Liscenece  - Enjoy boys, keep updating without me. Fork to your hearts content
  */
 
-namespace Smarti_Assist
+namespace CM_Assist
 {
     public partial class frmDialogue : Form
     {

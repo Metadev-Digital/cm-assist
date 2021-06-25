@@ -1,4 +1,4 @@
-﻿namespace Smarti_Assist
+﻿namespace CM_Assist
 /*CM Assist -frmPO-
 * Created: 6/25/2021
 * Updated: 6/25/2021

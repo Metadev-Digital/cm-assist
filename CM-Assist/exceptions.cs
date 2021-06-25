@@ -11,7 +11,7 @@ using System.Runtime.Serialization;
  * Copyright Copyright MIT Liscenece  - Enjoy boys, keep updating without me. Fork to your hearts content
  */
 
-namespace Smarti_Assist
+namespace CM_Assist
 {
     [Serializable()]
     public class IncompatibleFileVersionException : Exception, ISerializable
