@@ -1,4 +1,13 @@
 ﻿namespace Smarti_Assist
+
+/*CM Assist -frmConfiguration-
+* Created: 6/25/2021
+* Updated: 6/25/2021
+* Designed by: Kevin Sherman at Metadev Digital
+* Contact at: Kevin@metadevdigital.com
+* 
+* Copyright Copyright MIT Liscenece  - Enjoy boys, keep updating without me. Fork to your hearts content
+*/
 {
     partial class frmConfiguration
     {
@@ -46,7 +55,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Smarti_Assist.Properties.Resources.ACRELEC_LOGO;
+            this.pictureBox1.Image = global::CM_Assist.Properties.Resources.ACRELEC_LOGO;
             this.pictureBox1.Location = new System.Drawing.Point(30, 8);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";

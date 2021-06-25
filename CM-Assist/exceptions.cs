@@ -2,10 +2,10 @@
 using System.Runtime.Serialization;
 
 
-/*Smart-i Assist -Exceptions- Version 1.0.0.5
- * Created: 6/29/2020
- * Updated: 7/9/2020
- * Designed by: Kevin Sherman at Acrelec America
+/*CM Assist -Exceptions-
+ * Created: 6/25/2021
+ * Updated: 6/25/2021
+ * Designed by: Kevin Sherman at Metadev Digital
  * Contact at: Kevin@metadevdigital.com
  * 
  * Copyright Copyright MIT Liscenece  - Enjoy boys, keep updating without me. Fork to your hearts content

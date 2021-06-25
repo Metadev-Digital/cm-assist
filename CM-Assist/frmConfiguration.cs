@@ -1,4 +1,4 @@
-﻿using Smarti_Assist.Properties;
+﻿using CM_Assist.Properties;
 using System;
 using System.Windows.Forms;
 
@@ -6,7 +6,7 @@ using System.Windows.Forms;
 /*Smart-i Assist -About- Version 1.0.0.5
  * Created: 6/29/2020
  * Updated: 7/9/2020
- * Designed by: Kevin Sherman at Acrelec America
+ * Designed by: Kevin Sherman at Metadev Digital
  * Contact at: Kevin@metadevdigital.com
  * 
  * Copyright Copyright MIT Liscenece  - Enjoy boys, keep updating without me. Fork to your hearts content

@@ -1,5 +1,5 @@
 ﻿using Microsoft.WindowsAPICodePack.Dialogs;
-using Smarti_Assist.Properties;
+using CM_Assist.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-/*Smart-i Assist -FileManipulator- Version 1.0.0.5
- * Created: 7/6/2020
- * Updated: 7/9/2020
- * Designed by: Kevin Sherman at Acrelec America
+/*CM Assist -FileManipulator-
+ * Created: 6/25/2021
+ * Updated: 6/25/2021
+ * Designed by: Kevin Sherman at Metadev Digital
  * Contact at: Kevin@metadevdigital.com
  * 
  * Copyright Copyright MIT Liscenece  - Enjoy boys, keep updating without me. Fork to your hearts content
