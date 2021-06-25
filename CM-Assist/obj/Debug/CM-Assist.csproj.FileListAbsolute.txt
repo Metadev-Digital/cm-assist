@@ -1,0 +1,9 @@
+C:\Users\kevin.sherman\source\repos\CM-Assist\CM-Assist\bin\Debug\CM-Assist.exe.config
+C:\Users\kevin.sherman\source\repos\CM-Assist\CM-Assist\bin\Debug\CM-Assist.exe
+C:\Users\kevin.sherman\source\repos\CM-Assist\CM-Assist\bin\Debug\CM-Assist.pdb
+C:\Users\kevin.sherman\source\repos\CM-Assist\CM-Assist\obj\Debug\CM_Assist.Form1.resources
+C:\Users\kevin.sherman\source\repos\CM-Assist\CM-Assist\obj\Debug\CM_Assist.Properties.Resources.resources
+C:\Users\kevin.sherman\source\repos\CM-Assist\CM-Assist\obj\Debug\CM-Assist.csproj.GenerateResource.cache
+C:\Users\kevin.sherman\source\repos\CM-Assist\CM-Assist\obj\Debug\CM-Assist.csproj.CoreCompileInputs.cache
+C:\Users\kevin.sherman\source\repos\CM-Assist\CM-Assist\obj\Debug\CM-Assist.exe
+C:\Users\kevin.sherman\source\repos\CM-Assist\CM-Assist\obj\Debug\CM-Assist.pdb
