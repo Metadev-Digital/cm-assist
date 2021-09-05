@@ -46,7 +46,7 @@ namespace CM_Assist
 {
     public partial class frmMain : Form
     {
-        List<String> lstArkSerials, lstInjectorSerials;
+        List<String> lstKioskSerials, lstPPCSerials, lstScannerSerials, lstPrinterSerials;
 
         public frmMain()
         {
@@ -79,9 +79,9 @@ namespace CM_Assist
         /// <param name="e">mnuHelpAbout</param>
         private void aboutSmartiAssistToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ErrorReporter errorReporter = new ErrorReporter("Smart-i Assist");
-            InfoDisplayer infoDisplayer = new InfoDisplayer("Smart-i Assist", "Acrelec America", "MIT Licence", "help facilitate " +
-                "construction of our in-house product, Hyperviews", errorReporter);
+            ErrorReporter errorReporter = new ErrorReporter("CM Assist");
+            InfoDisplayer infoDisplayer = new InfoDisplayer("CM Assist", "Acrelec America", "MIT Licence", "help facilitate " +
+                "construction of our in-house product, Counter Mounted Elo's", errorReporter);
             infoDisplayer.showForm();
         }
 
@@ -92,10 +92,14 @@ namespace CM_Assist
         /// <param name="e">mnuFileClear</param>
         private void mnuFileClear_Click(object sender, EventArgs e)
         {
-            lstArk.Items.Clear();
-            lstInj.Items.Clear();
-            lstArkSerials.Clear();
-            lstInjectorSerials.Clear();
+            lstKiosk.Items.Clear();
+            lstPPC.Items.Clear();
+            lstScanner.Items.Clear();
+            lstPrinter.Items.Clear();
+            lstKioskSerials.Clear();
+            lstPPCSerials.Clear();
+            lstScannerSerials.Clear();
+            lstPrinterSerials.Clear();
 
             MessageBox.Show("Serials successfully reset.", "Reset Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -119,27 +123,27 @@ namespace CM_Assist
         /// 
         /// </summary>
         /// <param name="sender">frmMain</param>
-        /// <param name="e">btnArk</param>
-        /// <see cref="btnInj_Click(object, EventArgs)"/>
-        private void btnArk_Click(object sender, EventArgs e)
+        /// <param name="e">btnKiosk</param>
+        /// <see cref="btnPPC_Click(object, EventArgs)"/>
+        private void btnKiosk_Click(object sender, EventArgs e)
         {
             using (frmDialogue dialogueForm = new frmDialogue())
             {
                 var selection = dialogueForm.ShowDialog();
                 if(selection==DialogResult.OK)
                 {
-                    lstArkSerials = dialogueForm.outReturn;
+                    lstKioskSerials = dialogueForm.outReturn;
 
-                    lstArk.Items.Clear();
+                    lstKiosk.Items.Clear();
 
-                    if (lstArkSerials.ElementAt(0).Equals("PC"))
+                    if (lstKioskSerials.ElementAt(0).Equals("Kiosk"))
                     {
-                        lstArkSerials.RemoveAt(0);
+                        lstKioskSerials.RemoveAt(0);
                     }
 
-                    foreach (string line in lstArkSerials)
+                    foreach (string line in lstKioskSerials)
                     {
-                        lstArk.Items.Add(line);
+                        lstKiosk.Items.Add(line);
                     }
                 }
             }
@@ -154,27 +158,97 @@ namespace CM_Assist
         /// 
         /// </summary>
         /// <param name="sender">frmMain</param>
-        /// <param name="e">btnInj</param>
-        /// <see cref="btnArk_Click(object, EventArgs)"/>
-        private void btnInj_Click(object sender, EventArgs e)
+        /// <param name="e">btnPPC</param>
+        /// <see cref="btnKiosk_Click(object, EventArgs)"/>
+        private void btnPPC_Click(object sender, EventArgs e)
         {
             using (frmDialogue dialogueForm = new frmDialogue())
             {
                 var selection = dialogueForm.ShowDialog();
                 if (selection == DialogResult.OK)
                 {
-                    lstInjectorSerials = dialogueForm.outReturn;
+                    lstPPCSerials = dialogueForm.outReturn;
 
-                    lstInj.Items.Clear();
+                    lstPPC.Items.Clear();
 
-                    if(lstInjectorSerials.ElementAt(0).Equals("Injector"))
+                    if(lstPPCSerials.ElementAt(0).Equals("PPC"))
                     {
-                        lstInjectorSerials.RemoveAt(0);
+                        lstPPCSerials.RemoveAt(0);
                     }
 
-                    foreach (string line in lstInjectorSerials)
+                    foreach (string line in lstPPCSerials)
                     {
-                        lstInj.Items.Add(line);
+                        lstPPC.Items.Add(line);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// PRE: Data must be accesible to enter in frmDialogue
+        /// POST: Take data entered by user which has been arleady validated and set it to local variables
+        /// 
+        /// Create a new form as dialogue and recieve validated input from it if the dialogue form returns OK.
+        /// Set local list's data to the new validated data, clear visual list box and add that data to it for user.
+        /// 
+        /// </summary>
+        /// <param name="sender">frmMain</param>
+        /// <param name="e">btnScanner</param>
+        /// <see cref="btnKiosk_Click(object, EventArgs)"/>
+        private void btnScanner_Click(object sender, EventArgs e)
+        {
+            using (frmDialogue dialogueForm = new frmDialogue())
+            {
+                var selection = dialogueForm.ShowDialog();
+                if (selection == DialogResult.OK)
+                {
+                    lstScannerSerials = dialogueForm.outReturn;
+
+                    lstScanner.Items.Clear();
+
+                    if (lstScannerSerials.ElementAt(0).Equals("Scanner"))
+                    {
+                        lstScannerSerials.RemoveAt(0);
+                    }
+
+                    foreach (string line in lstScannerSerials)
+                    {
+                        lstScanner.Items.Add(line);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// PRE: Data must be accesible to enter in frmDialogue
+        /// POST: Take data entered by user which has been arleady validated and set it to local variables
+        /// 
+        /// Create a new form as dialogue and recieve validated input from it if the dialogue form returns OK.
+        /// Set local list's data to the new validated data, clear visual list box and add that data to it for user.
+        /// 
+        /// </summary>
+        /// <param name="sender">frmMain</param>
+        /// <param name="e">btnPPC</param>
+        /// <see cref="btnKiosk_Click(object, EventArgs)"/>
+        private void btnPrinter_Click(object sender, EventArgs e)
+        {
+            using (frmDialogue dialogueForm = new frmDialogue())
+            {
+                var selection = dialogueForm.ShowDialog();
+                if (selection == DialogResult.OK)
+                {
+                    lstPrinterSerials = dialogueForm.outReturn;
+
+                    lstPrinter.Items.Clear();
+
+                    if (lstPrinterSerials.ElementAt(0).Equals("Printer"))
+                    {
+                        lstPrinterSerials.RemoveAt(0);
+                    }
+
+                    foreach (string line in lstPrinterSerials)
+                    {
+                        lstPrinter.Items.Add(line);
                     }
                 }
             }
@@ -189,11 +263,11 @@ namespace CM_Assist
         /// <seealso cref="mnuFileSave_Click(object, EventArgs)"/>
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if(validateSerials(lstArkSerials,lstInjectorSerials))
+            if(validateSerials(lstKioskSerials,lstPPCSerials, lstScannerSerials, lstPrinterSerials))
             {
                 using(labelMaker lm = new labelMaker())
                 {
-                    lm.printLabels(lstArkSerials, lstInjectorSerials);
+                    lm.printLabels(lstKioskSerials, lstPPCSerials, lstScannerSerials, lstPrinterSerials);
                 }
             }
         }
@@ -207,11 +281,11 @@ namespace CM_Assist
         /// <seealso cref="mnuFilePrint_Click(object, EventArgs)"/>
         private void mnuFileSave_Click(object sender, EventArgs e)
         {
-            if(validateSerials(lstArkSerials,lstInjectorSerials))
+            if(validateSerials(lstKioskSerials, lstPPCSerials, lstScannerSerials, lstPrinterSerials))
             {
                 using(labelMaker lm = new labelMaker())
                 {
-                    lm.saveLabels(lstArkSerials, lstInjectorSerials);
+                    lm.saveLabels(lstKioskSerials, lstPPCSerials, lstScannerSerials, lstPrinterSerials);
                 }
             }
         }
@@ -225,11 +299,11 @@ namespace CM_Assist
         /// <seealso cref="mnuFileSave_Click(object, EventArgs)"/>
         private void mnuFilePrint_Click(object sender, EventArgs e)
         {
-            if(validateSerials(lstArkSerials,lstInjectorSerials))
+            if(validateSerials(lstKioskSerials, lstPPCSerials, lstScannerSerials, lstPrinterSerials))
             {
                 using(labelMaker lm = new labelMaker())
                 {
-                    lm.printLabels(lstArkSerials, lstInjectorSerials);
+                    lm.printLabels(lstKioskSerials, lstPPCSerials, lstScannerSerials, lstPrinterSerials);
                 }
             }
         }
@@ -524,7 +598,7 @@ namespace CM_Assist
         /// <param name="e">mnuHelpReport</param>
         private void mnuHelpReport_Click(object sender, EventArgs e)
         {
-            ErrorReporter errorReporter = new ErrorReporter("Smart-i Assist");
+            ErrorReporter errorReporter = new ErrorReporter("CM Assist");
             errorReporter.showForm();
         }
 
@@ -632,29 +706,41 @@ namespace CM_Assist
         /// Checks for the existance of data inside of the variables before shipping them off for label making.
         /// Handled in a function so this doesn't have to be hand written 3 times.
         /// </summary>
-        /// <param name="lstArkSerials">List of all Ark Serials</param>
-        /// <param name="lstInjectorSerials">List of all Injector Serials</param>
+        /// <param name="lstKioskSerials">List of all Ark Serials</param>
+        /// <param name="lstPPCSerials">List of all Injector Serials</param>
         /// <returns></returns>
-        private bool validateSerials(List<string> lstArkSerials, List<string> lstInjectorSerials)
+        private bool validateSerials(List<string> lstKioskSerials, List<string> lstPPCSerials, List<string> lstScannerSerials, List<string> lstPrinterSerials)
         {
-                if ((lstInjectorSerials == null || lstInjectorSerials.Count<1) && (lstArkSerials == null || lstArkSerials.Count<1))
+                if ((lstPPCSerials == null || lstPPCSerials.Count<1) && (lstKioskSerials == null || lstKioskSerials.Count<1) && (lstScannerSerials == null || lstScannerSerials.Count < 1) && (lstPrinterSerials == null || lstPrinterSerials.Count < 1))
                 {
                     MessageBox.Show("No serial entries were provided. \nPlease enter data and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-                else if (lstInjectorSerials == null || lstInjectorSerials.Count<1)
+                else if (lstPPCSerials == null || lstPPCSerials.Count<1)
                 {
-                    MessageBox.Show("No Smart Injector serials were provided. \nEnter data and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No PPC serials were provided. \nEnter data and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-                else if(lstArkSerials == null || lstArkSerials.Count<1)
+                else if(lstKioskSerials == null || lstKioskSerials.Count<1)
                 {
-                    MessageBox.Show("No ARK serials were provided. \nEnter data and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No kiosk serials were provided. \nEnter data and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-                else if (lstInjectorSerials.Count != lstArkSerials.Count)
+                else if (lstScannerSerials == null || lstScannerSerials.Count < 1)
                 {
-                    if (lstArkSerials.Count > lstInjectorSerials.Count)
+                    MessageBox.Show("No scanner serials were provided. \nEnter data and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                else if (lstPrinterSerials == null || lstPrinterSerials.Count < 1)
+                {
+                    MessageBox.Show("No printer serials were provided. \nEnter data and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                else if (!((lstPPCSerials.Count == lstKioskSerials.Count) && (lstKioskSerials.Count == lstScannerSerials.Count) && (lstScannerSerials.Count == lstPrinterSerials.Count)))
+                {
+
+                    MessageBox.Show("The number of serials is inconsistent between parts. \n Enter data and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (lstKioskSerials.Count > lstPPCSerials.Count)
                     {
                         MessageBox.Show("There are more ARK serial number entries \nthan Smart Injectors. Re-enter the data and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -671,42 +757,42 @@ namespace CM_Assist
         private static void SetAddRemoveProgramsIcon()
         {
             //Only execute on a first run after first install or after update
-            if (ApplicationDeployment.CurrentDeployment.IsFirstRun)
-            {
-                try
-                {
-                    // Set the name of the application EXE file - make sure to include `,0` at the end.
-                    // Does not work for ClickOnce applications as far as I could figure out... Note, this will probably work
-                    // when run from Visual Studio, but not when deployed.
-                    //string iconSourcePath = Path.Combine(System.Windows.Forms.Application.StartupPath, "example.exe,0");
-                    // Reverted to using this instead (note this will probably not work when run from Visual Studio, but will work on deploy.
-                    string iconSourcePath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Acrelec Favicon.ico");
-                    if (!File.Exists(iconSourcePath))
-                    {
-                        MessageBox.Show("We could not find the application icon. Please notify your software vendor of this error.");
-                        return;
-                    }
+            //if (ApplicationDeployment.CurrentDeployment.IsFirstRun)
+            //{
+            //    try
+            //    {
+            //        // Set the name of the application EXE file - make sure to include `,0` at the end.
+            //        // Does not work for ClickOnce applications as far as I could figure out... Note, this will probably work
+            //        // when run from Visual Studio, but not when deployed.
+            //        //string iconSourcePath = Path.Combine(System.Windows.Forms.Application.StartupPath, "example.exe,0");
+            //        // Reverted to using this instead (note this will probably not work when run from Visual Studio, but will work on deploy.
+            //        string iconSourcePath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Acrelec Favicon.ico");
+            //        if (!File.Exists(iconSourcePath))
+            //        {
+            //            MessageBox.Show("We could not find the application icon. Please notify your software vendor of this error.");
+            //            return;
+            //        }
 
-                    RegistryKey myUninstallKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Uninstall");
-                    string[] mySubKeyNames = myUninstallKey.GetSubKeyNames();
-                    for (int i = 0; i < mySubKeyNames.Length; i++)
-                    {
-                        RegistryKey myKey = myUninstallKey.OpenSubKey(mySubKeyNames[i], true);
-                        object myValue = myKey.GetValue("DisplayName");
-                        Console.WriteLine(myValue.ToString());
-                        // Set this to the display name of the application. If you are not sure, browse to the registry directory and check.
-                        if (myValue != null && myValue.ToString() == "Smarti Assist")
-                        {
-                            myKey.SetValue("DisplayIcon", iconSourcePath);
-                            break;
-                        }
-                    }
-                }
-                catch (Exception mye)
-                {
-                    MessageBox.Show("We could not properly setup the application icons. Please notify your software vendor of this error.\r\n" + mye.ToString());
-                }
-            }
+            //        RegistryKey myUninstallKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Uninstall");
+            //        string[] mySubKeyNames = myUninstallKey.GetSubKeyNames();
+            //        for (int i = 0; i < mySubKeyNames.Length; i++)
+            //        {
+            //            RegistryKey myKey = myUninstallKey.OpenSubKey(mySubKeyNames[i], true);
+            //            object myValue = myKey.GetValue("DisplayName");
+            //            Console.WriteLine(myValue.ToString());
+            //            // Set this to the display name of the application. If you are not sure, browse to the registry directory and check.
+            //            if (myValue != null && myValue.ToString() == "Smarti Assist")
+            //            {
+            //                myKey.SetValue("DisplayIcon", iconSourcePath);
+            //                break;
+            //            }
+            //        }
+            //    }
+            //    catch (Exception mye)
+            //    {
+            //        MessageBox.Show("We could not properly setup the application icons. Please notify your software vendor of this error.\r\n" + mye.ToString());
+            //    }
+            //}
         }
     }
 }

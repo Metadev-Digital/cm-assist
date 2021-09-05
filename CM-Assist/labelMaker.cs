@@ -152,7 +152,7 @@ namespace CM_Assist
             document.Add(table);
         }
 
-        public void printLabels(List<string> lstArkSerials, List<string> lstInjectorSerials)
+        public void printLabels(List<string> lstKioskSerials, List<string> lstPPCSerials)
         {
             try
             {
@@ -173,11 +173,11 @@ namespace CM_Assist
                             multipleCopies = true;
                         }
 
-                        for (int i = 0; i < lstArkSerials.Count(); i++)
+                        for (int i = 0; i < lstKioskSerials.Count(); i++)
                         {
                             for (int j = 1; j <= Settings.Default.copies; j++)
                             {
-                                createLabel(outDocument, outPDF, lstArkSerials.ElementAt(i), lstInjectorSerials.ElementAt(i),multipleCopies,j, Settings.Default.copies);
+                                createLabel(outDocument, outPDF, lstKioskSerials.ElementAt(i), lstPPCSerials.ElementAt(i),multipleCopies,j, Settings.Default.copies);
                             }
                         }
 
@@ -228,9 +228,9 @@ namespace CM_Assist
         /// Iterates through all elements inside of relevant lists to create the required number of labels inside 
         /// of the PDF document, separated by pages.
         /// </summary>
-        /// <param name="lstArkSerials">List of strings, representative of the entered ARK serial numbers</param>
-        /// <param name="lstInjectorSerials">List of strings, representative of the entered Injector serial numbers</param>
-        public void saveLabels(List<string> lstArkSerials, List<string> lstInjectorSerials)
+        /// <param name="lstKioskSerials">List of strings, representative of the entered ARK serial numbers</param>
+        /// <param name="lstPPCSerials">List of strings, representative of the entered Injector serial numbers</param>
+        public void saveLabels(List<string> lstKioskSerials, List<string> lstPPCSerials)
         {
             try
             {
@@ -250,11 +250,11 @@ namespace CM_Assist
                         multipleCopies = true;
                     }
 
-                    for (int i = 0; i < lstArkSerials.Count(); i++)
+                    for (int i = 0; i < lstKioskSerials.Count(); i++)
                     {
                         for (int j = 1; j <= Settings.Default.copies; j++)
                         {
-                            createLabel(outDocument, outPDF, lstArkSerials.ElementAt(i), lstInjectorSerials.ElementAt(i), multipleCopies, j, Settings.Default.copies);
+                            createLabel(outDocument, outPDF, lstKioskSerials.ElementAt(i), lstPPCSerials.ElementAt(i), multipleCopies, j, Settings.Default.copies);
                         }
                     }
 

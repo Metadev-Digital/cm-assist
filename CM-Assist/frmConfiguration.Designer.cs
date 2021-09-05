@@ -56,6 +56,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CM_Assist.Properties.Resources.ACRELEC_LOGO;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(30, 8);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -165,7 +166,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(265, 13);
             this.label6.TabIndex = 25;
-            this.label6.Text = "Copyright © 2020 All Rights Reserved - Acrelec America";
+            this.label6.Text = "Copyright © 2021 All Rights Reserved - Acrelec America";
             // 
             // label7
             // 
@@ -199,7 +200,7 @@
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmConfiguration";
-            this.Text = "Smart-i Assist | Configuration Panel";
+            this.Text = "CM Assist | Configuration Panel";
             this.Load += new System.EventHandler(this.frmConfiguration_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmConfiguration_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

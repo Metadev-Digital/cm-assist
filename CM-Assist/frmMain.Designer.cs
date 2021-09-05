@@ -67,12 +67,18 @@
             this.chkDate = new System.Windows.Forms.CheckBox();
             this.chkInjector = new System.Windows.Forms.CheckBox();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.lstArk = new System.Windows.Forms.ListBox();
-            this.lstInj = new System.Windows.Forms.ListBox();
+            this.lstKiosk = new System.Windows.Forms.ListBox();
+            this.lstPPC = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnArk = new System.Windows.Forms.Button();
-            this.btnInj = new System.Windows.Forms.Button();
+            this.btnKiosk = new System.Windows.Forms.Button();
+            this.btnPPC = new System.Windows.Forms.Button();
+            this.btnPrinter = new System.Windows.Forms.Button();
+            this.btnScanner = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lstPrinter = new System.Windows.Forms.ListBox();
+            this.lstScanner = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.grpOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCopies)).BeginInit();
@@ -219,7 +225,7 @@
             // 
             this.mnuViewAss.Name = "mnuViewAss";
             this.mnuViewAss.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.mnuViewAss.Size = new System.Drawing.Size(248, 22);
+            this.mnuViewAss.Size = new System.Drawing.Size(228, 22);
             this.mnuViewAss.Text = "Assembly Document";
             this.mnuViewAss.Click += new System.EventHandler(this.mnuViewAss_Click);
             // 
@@ -227,8 +233,8 @@
             // 
             this.mnuViewSmart.Name = "mnuViewSmart";
             this.mnuViewSmart.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.mnuViewSmart.Size = new System.Drawing.Size(248, 22);
-            this.mnuViewSmart.Text = "Smart-i Assist Document";
+            this.mnuViewSmart.Size = new System.Drawing.Size(228, 22);
+            this.mnuViewSmart.Text = "CM Assist Document";
             this.mnuViewSmart.Click += new System.EventHandler(this.mnuViewSmart_Click);
             // 
             // helpToolStripMenuItem
@@ -264,7 +270,7 @@
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(-6, 328);
+            this.label1.Location = new System.Drawing.Point(-6, 351);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(754, 2);
@@ -274,18 +280,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(246, 335);
+            this.label2.Location = new System.Drawing.Point(246, 358);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(265, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Copyright © 2020 All Rights Reserved - Acrelec America";
+            this.label2.Text = "Copyright © 2021 All Rights Reserved - Acrelec America";
             // 
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVersion.Location = new System.Drawing.Point(677, 335);
+            this.lblVersion.Location = new System.Drawing.Point(677, 358);
             this.lblVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(60, 13);
@@ -451,32 +457,32 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(567, 274);
+            this.btnPrint.Location = new System.Drawing.Point(569, 286);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(143, 30);
+            this.btnPrint.Size = new System.Drawing.Size(149, 30);
             this.btnPrint.TabIndex = 5;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
-            // lstArk
+            // lstKiosk
             // 
-            this.lstArk.FormattingEnabled = true;
-            this.lstArk.Location = new System.Drawing.Point(11, 79);
-            this.lstArk.Margin = new System.Windows.Forms.Padding(2);
-            this.lstArk.Name = "lstArk";
-            this.lstArk.Size = new System.Drawing.Size(257, 225);
-            this.lstArk.TabIndex = 6;
+            this.lstKiosk.FormattingEnabled = true;
+            this.lstKiosk.Location = new System.Drawing.Point(11, 79);
+            this.lstKiosk.Margin = new System.Windows.Forms.Padding(2);
+            this.lstKiosk.Name = "lstKiosk";
+            this.lstKiosk.Size = new System.Drawing.Size(257, 108);
+            this.lstKiosk.TabIndex = 6;
             // 
-            // lstInj
+            // lstPPC
             // 
-            this.lstInj.FormattingEnabled = true;
-            this.lstInj.Location = new System.Drawing.Point(285, 79);
-            this.lstInj.Margin = new System.Windows.Forms.Padding(2);
-            this.lstInj.Name = "lstInj";
-            this.lstInj.Size = new System.Drawing.Size(257, 225);
-            this.lstInj.TabIndex = 7;
+            this.lstPPC.FormattingEnabled = true;
+            this.lstPPC.Location = new System.Drawing.Point(285, 79);
+            this.lstPPC.Margin = new System.Windows.Forms.Padding(2);
+            this.lstPPC.Name = "lstPPC";
+            this.lstPPC.Size = new System.Drawing.Size(257, 108);
+            this.lstPPC.TabIndex = 7;
             // 
             // label8
             // 
@@ -485,9 +491,9 @@
             this.label8.Location = new System.Drawing.Point(64, 52);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 18);
+            this.label8.Size = new System.Drawing.Size(108, 18);
             this.label8.TabIndex = 8;
-            this.label8.Text = "ARK Serials";
+            this.label8.Text = "Kiosk Serials";
             // 
             // label9
             // 
@@ -496,44 +502,110 @@
             this.label9.Location = new System.Drawing.Point(342, 51);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(121, 18);
+            this.label9.Size = new System.Drawing.Size(99, 18);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Injector Serials";
+            this.label9.Text = "PPC Serials";
             // 
-            // btnArk
+            // btnKiosk
             // 
-            this.btnArk.Location = new System.Drawing.Point(218, 50);
-            this.btnArk.Margin = new System.Windows.Forms.Padding(2);
-            this.btnArk.Name = "btnArk";
-            this.btnArk.Size = new System.Drawing.Size(50, 23);
-            this.btnArk.TabIndex = 10;
-            this.btnArk.Text = "Import";
-            this.btnArk.UseVisualStyleBackColor = true;
-            this.btnArk.Click += new System.EventHandler(this.btnArk_Click);
+            this.btnKiosk.Location = new System.Drawing.Point(218, 50);
+            this.btnKiosk.Margin = new System.Windows.Forms.Padding(2);
+            this.btnKiosk.Name = "btnKiosk";
+            this.btnKiosk.Size = new System.Drawing.Size(50, 23);
+            this.btnKiosk.TabIndex = 10;
+            this.btnKiosk.Text = "Import";
+            this.btnKiosk.UseVisualStyleBackColor = true;
+            this.btnKiosk.Click += new System.EventHandler(this.btnKiosk_Click);
             // 
-            // btnInj
+            // btnPPC
             // 
-            this.btnInj.Location = new System.Drawing.Point(492, 50);
-            this.btnInj.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInj.Name = "btnInj";
-            this.btnInj.Size = new System.Drawing.Size(50, 23);
-            this.btnInj.TabIndex = 11;
-            this.btnInj.Text = "Import";
-            this.btnInj.UseVisualStyleBackColor = true;
-            this.btnInj.Click += new System.EventHandler(this.btnInj_Click);
+            this.btnPPC.Location = new System.Drawing.Point(492, 50);
+            this.btnPPC.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPPC.Name = "btnPPC";
+            this.btnPPC.Size = new System.Drawing.Size(50, 23);
+            this.btnPPC.TabIndex = 11;
+            this.btnPPC.Text = "Import";
+            this.btnPPC.UseVisualStyleBackColor = true;
+            this.btnPPC.Click += new System.EventHandler(this.btnPPC_Click);
+            // 
+            // btnPrinter
+            // 
+            this.btnPrinter.Location = new System.Drawing.Point(492, 200);
+            this.btnPrinter.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrinter.Name = "btnPrinter";
+            this.btnPrinter.Size = new System.Drawing.Size(50, 23);
+            this.btnPrinter.TabIndex = 17;
+            this.btnPrinter.Text = "Import";
+            this.btnPrinter.UseVisualStyleBackColor = true;
+            // 
+            // btnScanner
+            // 
+            this.btnScanner.Location = new System.Drawing.Point(218, 200);
+            this.btnScanner.Margin = new System.Windows.Forms.Padding(2);
+            this.btnScanner.Name = "btnScanner";
+            this.btnScanner.Size = new System.Drawing.Size(50, 23);
+            this.btnScanner.TabIndex = 16;
+            this.btnScanner.Text = "Import";
+            this.btnScanner.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(342, 201);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 18);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Printer Serials";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(64, 202);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(127, 18);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Scanner Serials";
+            // 
+            // lstPrinter
+            // 
+            this.lstPrinter.FormattingEnabled = true;
+            this.lstPrinter.Location = new System.Drawing.Point(285, 229);
+            this.lstPrinter.Margin = new System.Windows.Forms.Padding(2);
+            this.lstPrinter.Name = "lstPrinter";
+            this.lstPrinter.Size = new System.Drawing.Size(257, 108);
+            this.lstPrinter.TabIndex = 13;
+            // 
+            // lstScanner
+            // 
+            this.lstScanner.FormattingEnabled = true;
+            this.lstScanner.Location = new System.Drawing.Point(11, 229);
+            this.lstScanner.Margin = new System.Windows.Forms.Padding(2);
+            this.lstScanner.Name = "lstScanner";
+            this.lstScanner.Size = new System.Drawing.Size(257, 108);
+            this.lstScanner.TabIndex = 12;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(748, 356);
-            this.Controls.Add(this.btnInj);
-            this.Controls.Add(this.btnArk);
+            this.ClientSize = new System.Drawing.Size(748, 376);
+            this.Controls.Add(this.btnPrinter);
+            this.Controls.Add(this.btnScanner);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lstPrinter);
+            this.Controls.Add(this.lstScanner);
+            this.Controls.Add(this.btnPPC);
+            this.Controls.Add(this.btnKiosk);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.lstInj);
-            this.Controls.Add(this.lstArk);
+            this.Controls.Add(this.lstPPC);
+            this.Controls.Add(this.lstKiosk);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.grpOptions);
             this.Controls.Add(this.lblVersion);
@@ -546,7 +618,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmMain";
-            this.Text = "Smart-i Assist";
+            this.Text = "CM Assist";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -595,15 +667,21 @@
         private System.Windows.Forms.TextBox txtTech;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.ListBox lstArk;
-        private System.Windows.Forms.ListBox lstInj;
+        private System.Windows.Forms.ListBox lstKiosk;
+        private System.Windows.Forms.ListBox lstPPC;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnArk;
-        private System.Windows.Forms.Button btnInj;
+        private System.Windows.Forms.Button btnKiosk;
+        private System.Windows.Forms.Button btnPPC;
         private System.Windows.Forms.ToolStripMenuItem mnuFileClear;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nudCopies;
+        private System.Windows.Forms.Button btnPrinter;
+        private System.Windows.Forms.Button btnScanner;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ListBox lstPrinter;
+        private System.Windows.Forms.ListBox lstScanner;
     }
 }
 
